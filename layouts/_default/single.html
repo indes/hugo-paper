@@ -1,4 +1,12 @@
 {{ partial "header.html" . }}
+
+{{ if not (eq .Params.comments false) }}
+  {{ if .Site.DisqusShortname }}
+    <link rel="stylesheet" href="https://wanglics.coding.me/static_cdn/css/iDisqus.min.css" />
+    <script src="https://wanglics.coding.me/static_cdn/js/iDisqus.min"></script>
+  {{ end }}
+{{ end }}
+
 <article class="post post-view">
   <header class="post-header">
     <h1 class="post-title">{{ .Title }}</h1>
@@ -56,9 +64,6 @@
       init: true
     });
     </script>
-    
-
-
     {{ end }}
   {{ end }}
 </article>
