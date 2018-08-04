@@ -6,6 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta name="google-site-verification" content="9XnbTdtrf_LQtskZhhP0NwP_y4_Viem5H87bIGWadgw" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content=" {{- if not .IsHome }}
+  {{- if eq .Kind "page" }}{{ .Title }}
+  {{- else if eq .Data.Singular "tag" }}{{ .Data.Term }}
+  {{- else }}
+  {{ with .Title }}{{ . }}{{ end }}
+  {{- end }} - {{ end }}
+  {{- .Site.Title -}}" property="og:title">
+  <meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}{{ if eq $isHomePage false }} - {{ .Description }}{{ end }}" property="og:description">
   {{ partial "seo_schema" . }}
   <!-- Title -->
   <title>
