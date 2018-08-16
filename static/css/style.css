@@ -20,7 +20,7 @@ article, aside, figcaption, figure, footer, header, main, nav, section {
 }
 body {
   margin: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans", "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
   color: rgba(0, 0, 0, .8);
   font-size: 17px;
   line-height: 1.7;
